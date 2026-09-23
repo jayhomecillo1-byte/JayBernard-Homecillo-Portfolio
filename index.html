@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jay Bernard O. Homecillo | Junior Web Developer & IT Specialist</title>
+  
+  <!-- Apple-inspired Minimalist Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
     :root {
-        
       --bg-dark: #070709;
       --aurora-crimson: #ba0a0a;
       --aurora-lavender: #d1b0d5;
+      --aurora-deep: #4d0a1b;
       --text-main: #f5f5f7;
       --text-secondary: #a1a1a6;
       --text-muted: #6e6e73;
+      
+      /* Liquid Glass Tokens */
       --glass-surface: rgba(255, 255, 255, 0.04);
       --glass-surface-hover: rgba(255, 255, 255, 0.08);
       --glass-border: rgba(255, 255, 255, 0.12);
-      --glass-border-hover: rgba(255, 255, 255, 0.28);
-      --glass-specular: linear-gradient(135deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.02) 100%);
-      --accent-glow: rgba(186, 10, 10, 0.35);
-      --font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", sans-serif;
+      --glass-border-hover: rgba(209, 176, 213, 0.38);
+      --glass-specular: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.02) 100%);
+      --accent-glow: rgba(186, 10, 10, 0.4);
+      --font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Plus Jakarta Sans", "Inter", sans-serif;
       --radius-sm: 12px;
       --radius-md: 20px;
       --radius-lg: 28px;
@@ -72,23 +76,23 @@
       filter: blur(100px);
       opacity: 0.65;
       will-change: transform, opacity;
-      animation: floatAurora 18s ease-in-out infinite alternate;
+      animation: floatAurora 20s ease-in-out infinite alternate;
     }
 
     .aurora-blob-1 {
       top: -10%;
       left: 20%;
-      width: clamp(350px, 45vw, 650px);
-      height: clamp(350px, 45vw, 650px);
+      width: clamp(360px, 45vw, 680px);
+      height: clamp(360px, 45vw, 680px);
       background: radial-gradient(circle, var(--aurora-crimson) 0%, rgba(186, 10, 10, 0) 70%);
       animation-duration: 22s;
     }
 
     .aurora-blob-2 {
-      top: 15%;
-      right: 15%;
-      width: clamp(300px, 40vw, 600px);
-      height: clamp(300px, 40vw, 600px);
+      top: 18%;
+      right: 12%;
+      width: clamp(320px, 40vw, 620px);
+      height: clamp(320px, 40vw, 620px);
       background: radial-gradient(circle, var(--aurora-lavender) 0%, rgba(209, 176, 213, 0) 70%);
       opacity: 0.45;
       animation-duration: 19s;
@@ -97,12 +101,12 @@
 
     .aurora-blob-3 {
       bottom: -10%;
-      left: 30%;
-      width: clamp(400px, 50vw, 750px);
-      height: clamp(400px, 50vw, 750px);
-      background: radial-gradient(circle, #5b0728 0%, rgba(91, 7, 40, 0) 75%);
-      opacity: 0.5;
-      animation-duration: 26s;
+      left: 25%;
+      width: clamp(420px, 52vw, 760px);
+      height: clamp(420px, 52vw, 760px);
+      background: radial-gradient(circle, var(--aurora-deep) 0%, rgba(77, 10, 27, 0) 75%);
+      opacity: 0.55;
+      animation-duration: 25s;
       animation-delay: -10s;
     }
 
@@ -119,10 +123,10 @@
         transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
       }
       50% {
-        transform: translate3d(40px, -30px, 0) scale(1.15) rotate(12deg);
+        transform: translate3d(45px, -35px, 0) scale(1.12) rotate(10deg);
       }
       100% {
-        transform: translate3d(-30px, 40px, 0) scale(0.9) rotate(-8deg);
+        transform: translate3d(-35px, 45px, 0) scale(0.92) rotate(-8deg);
       }
     }
 
@@ -131,7 +135,7 @@
       backdrop-filter: blur(24px) saturate(180%);
       -webkit-backdrop-filter: blur(24px) saturate(180%);
       border: 1px solid var(--glass-border);
-      box-shadow: 0 12px 36px 0 rgba(0, 0, 0, 0.35),
+      box-shadow: 0 14px 38px 0 rgba(0, 0, 0, 0.38),
                   inset 0 1px 1px 0 rgba(255, 255, 255, 0.12);
       border-radius: var(--radius-md);
       transition: var(--transition-base);
@@ -146,17 +150,17 @@
       left: 0;
       right: 0;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
       opacity: 0.8;
       pointer-events: none;
     }
 
     .nav-wrapper {
       position: sticky;
-      top: 1.25rem;
-      z-index: 100;
+      top: 1.2rem;
+      z-index: 1000;
       width: 100%;
-      max-width: 1120px;
+      max-width: 1140px;
       margin: 0 auto;
       padding: 0 1.25rem;
     }
@@ -167,11 +171,12 @@
       justify-content: space-between;
       padding: 0.85rem 1.6rem;
       border-radius: var(--radius-full);
-      background: rgba(18, 16, 20, 0.65);
+      background: rgba(18, 16, 20, 0.72);
       backdrop-filter: blur(28px) saturate(190%);
       -webkit-backdrop-filter: blur(28px) saturate(190%);
       border: 1px solid rgba(255, 255, 255, 0.14);
-      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+      position: relative;
     }
 
     .nav-brand {
@@ -180,20 +185,20 @@
       gap: 0.75rem;
       text-decoration: none;
       color: var(--text-main);
-      font-weight: 600;
-      font-size: 1rem;
-      letter-spacing: -0.01em;
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: -0.02em;
     }
 
     .brand-initial {
-      width: 34px;
-      height: 34px;
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
       background: linear-gradient(135deg, var(--aurora-crimson), #730626);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 0.85rem;
+      font-size: 0.88rem;
       font-weight: 700;
       color: #fff;
       box-shadow: 0 0 14px var(--accent-glow);
@@ -210,7 +215,7 @@
     .nav-link {
       color: var(--text-secondary);
       text-decoration: none;
-      font-size: 0.875rem;
+      font-size: 0.88rem;
       font-weight: 500;
       padding: 0.5rem 1rem;
       border-radius: var(--radius-full);
@@ -225,7 +230,7 @@
     .nav-cta {
       background: rgba(255, 255, 255, 0.1);
       color: #fff !important;
-      border: 1px solid rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.16);
     }
 
     .nav-cta:hover {
@@ -234,7 +239,7 @@
       box-shadow: 0 0 18px var(--accent-glow);
     }
 
-    /* CSS Checkbox Hack for Mobile Menu */
+    /* CSS Checkbox Hack for Cellphones */
     .nav-toggle-input {
       display: none;
     }
@@ -242,30 +247,90 @@
     .nav-hamburger {
       display: none;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 38px;
-      height: 38px;
+      justify-content: space-between;
+      width: 34px;
+      height: 28px;
+      padding: 4px;
       cursor: pointer;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid var(--glass-border);
-      gap: 5px;
-      z-index: 110;
+      z-index: 1010;
+      -webkit-tap-highlight-color: transparent;
     }
 
     .nav-hamburger span {
       display: block;
-      width: 18px;
-      height: 1.5px;
-      background-color: var(--text-main);
+      width: 100%;
+      height: 2px;
+      background: var(--text-main);
       border-radius: 2px;
-      transition: var(--transition-base);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease;
+    }
+
+    /* Responsive Mobile Navigation Drawer */
+    @media (max-width: 860px) {
+      .navbar {
+        padding: 0.75rem 1.25rem;
+      }
+
+      .nav-hamburger {
+        display: flex;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: calc(100% + 12px);
+        left: 0;
+        right: 0;
+        background: rgba(14, 11, 16, 0.96);
+        backdrop-filter: blur(32px) saturate(200%);
+        -webkit-backdrop-filter: blur(32px) saturate(200%);
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        border-radius: var(--radius-md);
+        box-shadow: 0 24px 50px rgba(0, 0, 0, 0.85);
+        flex-direction: column;
+        padding: 1.25rem;
+        gap: 0.65rem;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-12px);
+        transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+        pointer-events: none;
+      }
+
+      .nav-link {
+        width: 100%;
+        text-align: center;
+        padding: 0.85rem 1rem;
+        font-size: 1rem;
+        display: block;
+      }
+
+      .nav-link:active {
+        background: rgba(255, 255, 255, 0.12);
+      }
+
+      .nav-toggle-input:checked ~ .nav-links {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
+
+      .nav-toggle-input:checked ~ .nav-hamburger span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+
+      .nav-toggle-input:checked ~ .nav-hamburger span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .nav-toggle-input:checked ~ .nav-hamburger span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
     }
 
     .container {
       width: 100%;
-      max-width: 1120px;
+      max-width: 1140px;
       margin: 0 auto;
       padding: 0 1.5rem;
     }
@@ -283,11 +348,11 @@
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      padding: 0.35rem 0.9rem;
+      padding: 0.35rem 0.95rem;
       border-radius: var(--radius-full);
       background: rgba(186, 10, 10, 0.12);
-      border: 1px solid rgba(186, 10, 10, 0.3);
-      color: #ff8585;
+      border: 1px solid rgba(186, 10, 10, 0.32);
+      color: #ff9191;
       font-size: 0.75rem;
       font-weight: 600;
       text-transform: uppercase;
@@ -296,32 +361,32 @@
     }
 
     .section-title {
-      font-size: clamp(1.85rem, 4vw, 2.75rem);
+      font-size: clamp(1.85rem, 4.2vw, 2.75rem);
       font-weight: 700;
-      letter-spacing: -0.025em;
+      letter-spacing: -0.03em;
       color: #fff;
     }
 
     .section-desc {
       color: var(--text-secondary);
       font-size: clamp(0.95rem, 2vw, 1.05rem);
-      max-width: 600px;
+      max-width: 620px;
       margin: 0.65rem auto 0;
       font-weight: 400;
     }
 
     .hero {
-      min-height: calc(90vh - 80px);
+      min-height: calc(88vh - 80px);
       display: flex;
       align-items: center;
       justify-content: center;
-      padding-top: 2rem;
+      padding-top: 1.5rem;
       position: relative;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
+      grid-template-columns: 1.18fr 0.82fr;
       align-items: center;
       gap: clamp(2rem, 5vw, 4rem);
       width: 100%;
@@ -349,7 +414,7 @@
     }
 
     .hero-name {
-      font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+      font-size: clamp(2.4rem, 5.6vw, 4.2rem);
       font-weight: 800;
       line-height: 1.06;
       letter-spacing: -0.035em;
@@ -373,7 +438,7 @@
     .hero-bio {
       color: var(--text-secondary);
       font-size: 1.05rem;
-      line-height: 1.65;
+      line-height: 1.68;
       margin-bottom: 2rem;
       max-width: 540px;
     }
@@ -389,7 +454,7 @@
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      padding: 0.85rem 1.75rem;
+      padding: 0.85rem 1.8rem;
       background: linear-gradient(135deg, #ba0a0a, #8f0606);
       color: #fff;
       text-decoration: none;
@@ -411,7 +476,7 @@
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      padding: 0.85rem 1.75rem;
+      padding: 0.85rem 1.8rem;
       background: var(--glass-surface);
       color: var(--text-main);
       text-decoration: none;
@@ -430,14 +495,13 @@
       transform: translateY(-2px);
     }
 
-    /* Portrait Image Card */
     .hero-portrait-card {
       position: relative;
       border-radius: var(--radius-lg);
       padding: 0.85rem;
       background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
       border: 1px solid rgba(255, 255, 255, 0.14);
-      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55), inset 0 1px 1px rgba(255, 255, 255, 0.2);
       overflow: hidden;
       max-width: 420px;
       margin: 0 auto;
@@ -469,7 +533,7 @@
       left: 1.25rem;
       right: 1.25rem;
       padding: 0.75rem 1rem;
-      background: rgba(14, 11, 16, 0.78);
+      background: rgba(14, 11, 16, 0.82);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       border: 1px solid rgba(255, 255, 255, 0.16);
@@ -491,6 +555,167 @@
       font-size: 0.9rem;
       font-weight: 600;
       color: #fff;
+    }
+
+    .documents-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .doc-card {
+      padding: 1.6rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      border-radius: var(--radius-md);
+      transition: var(--transition-base);
+    }
+
+    .doc-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--glass-border-hover);
+      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.5);
+    }
+
+    .doc-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .doc-title {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .doc-badge {
+      font-size: 0.725rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: var(--radius-full);
+      background: rgba(209, 176, 213, 0.15);
+      color: var(--aurora-lavender);
+      border: 1px solid rgba(209, 176, 213, 0.3);
+      font-weight: 600;
+      letter-spacing: 0.03em;
+    }
+
+    .doc-preview-wrapper {
+      position: relative;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      background: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      aspect-ratio: 1 / 1.414; /* A4 Paper Proportion */
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+      display: block;
+    }
+
+    .doc-preview-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .doc-preview-wrapper:hover .doc-preview-img {
+      transform: scale(1.02);
+    }
+
+    .doc-card-actions {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 0.25rem;
+    }
+
+    .doc-btn {
+      flex: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      font-size: 0.88rem;
+      font-weight: 600;
+      padding: 0.75rem 1rem;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      transition: var(--transition-base);
+      background: rgba(255, 255, 255, 0.06);
+      color: #ffffff;
+      border: 1px solid var(--glass-border);
+    }
+
+    .doc-btn:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.28);
+    }
+
+    /* Pure CSS Modal Lightbox (:target) */
+    .doc-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      z-index: 20000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1.25rem;
+    }
+
+    .doc-modal:target {
+      display: flex;
+    }
+
+    .doc-modal-content {
+      position: relative;
+      max-width: 92vw;
+      max-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .doc-modal-img {
+      max-width: 100%;
+      max-height: 88vh;
+      object-fit: contain;
+      border-radius: 12px;
+      box-shadow: 0 16px 50px rgba(0, 0, 0, 0.95);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      background: #ffffff;
+    }
+
+    .doc-modal-close {
+      position: absolute;
+      top: -18px;
+      right: -18px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.22);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      color: #ffffff;
+      font-size: 1.4rem;
+      line-height: 1;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition-base);
+    }
+
+    .doc-modal-close:hover {
+      background: var(--aurora-crimson);
+      transform: scale(1.08);
     }
 
     .about-card {
@@ -534,6 +759,46 @@
     .stat-desc {
       font-size: 0.825rem;
       color: var(--text-muted);
+    }
+
+    .photo-mosaic {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.25rem;
+      margin-top: 2rem;
+    }
+
+    .mosaic-item {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      aspect-ratio: 1 / 1.2;
+      position: relative;
+      border: 1px solid var(--glass-border);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .mosaic-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .mosaic-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .mosaic-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 0.75rem;
+      background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: #fff;
+      text-align: center;
     }
 
     .dual-grid {
@@ -892,46 +1157,6 @@
       word-break: break-all;
     }
 
-    .photo-mosaic {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.25rem;
-      margin-top: 2rem;
-    }
-
-    .mosaic-item {
-      border-radius: var(--radius-md);
-      overflow: hidden;
-      aspect-ratio: 1 / 1.2;
-      position: relative;
-      border: 1px solid var(--glass-border);
-      background: rgba(255, 255, 255, 0.03);
-    }
-
-    .mosaic-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-    }
-
-    .mosaic-item:hover img {
-      transform: scale(1.05);
-    }
-
-    .mosaic-caption {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding: 0.75rem;
-      background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
-      font-size: 0.75rem;
-      font-weight: 500;
-      color: #fff;
-      text-align: center;
-    }
-
     footer {
       border-top: 1px solid rgba(255, 255, 255, 0.08);
       padding: 3rem 0 2.5rem;
@@ -975,59 +1200,6 @@
       }
     }
 
-    @media (max-width: 768px) {
-      .nav-hamburger {
-        display: flex;
-      }
-
-      .nav-links {
-        position: fixed;
-        top: 4.8rem;
-        left: 1.25rem;
-        right: 1.25rem;
-        background: rgba(14, 11, 16, 0.94);
-        backdrop-filter: blur(28px) saturate(200%);
-        -webkit-backdrop-filter: blur(28px) saturate(200%);
-        border: 1px solid rgba(255, 255, 255, 0.15);
-        border-radius: var(--radius-md);
-        box-shadow: 0 20px 48px rgba(0, 0, 0, 0.6);
-        flex-direction: column;
-        padding: 1.25rem;
-        gap: 0.6rem;
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(-12px);
-        transition: var(--transition-base);
-        z-index: 99;
-      }
-
-      .nav-link {
-        width: 100%;
-        text-align: center;
-        padding: 0.85rem 1rem;
-        font-size: 1rem;
-      }
-
-      /* CSS-only open hamburger when checkbox is checked */
-      .nav-toggle-input:checked ~ .navbar .nav-links {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
-      }
-
-      .nav-toggle-input:checked ~ .navbar .nav-hamburger span:nth-child(1) {
-        transform: translateY(6.5px) rotate(45deg);
-      }
-
-      .nav-toggle-input:checked ~ .navbar .nav-hamburger span:nth-child(2) {
-        opacity: 0;
-      }
-
-      .nav-toggle-input:checked ~ .navbar .nav-hamburger span:nth-child(3) {
-        transform: translateY(-6.5px) rotate(-45deg);
-      }
-    }
-
     @media (max-width: 480px) {
       .container {
         padding: 0 1.15rem;
@@ -1043,7 +1215,7 @@
         justify-content: center;
       }
 
-      .projects-grid, .skills-grid, .dual-grid {
+      .projects-grid, .skills-grid, .dual-grid, .documents-grid {
         grid-template-columns: 1fr;
       }
     }
@@ -1051,7 +1223,6 @@
 </head>
 <body>
 
-  <!-- SoftAurora Simulation Container (colors #ba0a0a and #d1b0d5) -->
   <div class="aurora-container" aria-hidden="true">
     <div class="aurora-blob aurora-blob-1"></div>
     <div class="aurora-blob aurora-blob-2"></div>
@@ -1059,9 +1230,6 @@
   </div>
   <div class="aurora-noise-overlay" aria-hidden="true"></div>
 
-  <!-- Checkbox hack for zero-JS toggle -->
-  <input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-label="Toggle navigation drawer">
-  
   <div class="nav-wrapper">
     <nav class="navbar" aria-label="Primary Navigation">
       <a href="#hero" class="nav-brand">
@@ -1069,6 +1237,8 @@
         <span>Jay Bernard</span>
       </a>
 
+      <!-- CSS Checkbox Hack for cellphone navigation drawer -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-label="Toggle navigation drawer">
       <label for="nav-toggle" class="nav-hamburger" aria-label="Open menu">
         <span></span>
         <span></span>
@@ -1076,11 +1246,12 @@
       </label>
 
       <ul class="nav-links">
+        <li><a href="#documents" class="nav-link">Documents</a></li>
         <li><a href="#about" class="nav-link">About</a></li>
         <li><a href="#experience" class="nav-link">Experience</a></li>
         <li><a href="#projects" class="nav-link">Projects</a></li>
         <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#credentials" class="nav-link">Certifications</a></li>
+        <li><a href="#credentials" class="nav-link">Credentials</a></li>
         <li><a href="#contact" class="nav-link nav-cta">Get in Touch</a></li>
       </ul>
     </nav>
@@ -1094,26 +1265,26 @@
           <div class="hero-content">
             <div class="hero-status">
               <span class="status-dot"></span>
-              <span>Available for Web Development & IT Roles</span>
+              <span>Available for Web Development &amp; IT Roles</span>
             </div>
             
             <h1 class="hero-name">
               Hello, I'm <br><span>Jay Bernard</span>.
             </h1>
             
-            <p class="hero-role">Junior Web Developer & IT Support Specialist</p>
+            <p class="hero-role">Junior Web Developer &amp; IT Support Specialist</p>
             
             <p class="hero-bio">
-              A passionate IT graduate with expertise in building responsive web applications, robust database schemas, and intuitive UI/UX experiences. Dedicated to clean architectures and solving practical real-world problems.
+              A passionate IT graduate from Caraga State University with expertise in building responsive web applications, robust database schemas, and intuitive UI/UX experiences. Dedicated to clean architectures and solving practical real-world problems.
             </p>
             
             <div class="hero-actions">
-              <a href="#projects" class="btn-primary">
-                View My Projects
+              <a href="#documents" class="btn-primary">
+                View Official Documents
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
               </a>
-              <a href="#contact" class="btn-secondary">
-                Contact Me
+              <a href="#projects" class="btn-secondary">
+                View My Projects
               </a>
             </div>
           </div>
@@ -1140,6 +1311,73 @@
       </div>
     </section>
 
+    <section id="documents" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Credentials &amp; Submission</span>
+          <h2 class="section-title">Official Documents</h2>
+          <p class="section-desc">Pure high-resolution copies of my professional curriculum vitae and formal application letter.</p>
+        </div>
+
+        <div class="documents-grid">
+          <img src="WC Template.png" alt="Jay Bernard O. Homecillo Resume Placeholder" style="display: none;" />
+          <div class="doc-card liquid-glass">
+            <div class="doc-header">
+              <span class="doc-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--aurora-crimson);"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                Curriculum Vitae / Resume
+              </span>
+              <span class="doc-badge">Official Document</span>
+            </div>
+
+            <a href="#modal-resume" class="doc-preview-wrapper" title="Tap to view fullscreen">
+              <img src="resume.png" alt="Jay Bernard O. Homecillo Resume" class="doc-preview-img" onerror="this.onerror=null; this.src='image_4f0d83.png';" />
+            </a>
+
+            <div class="doc-card-actions">
+              <a href="#modal-resume" class="doc-btn">Fullscreen View</a>
+              <a href="resume.png" target="_blank" download="JayBernard_Homecillo_Resume.png" class="doc-btn">Download Image</a>
+            </div>
+          </div>
+
+          <!-- Document 2: Pure Application Letter Picture -->
+          <div class="doc-card liquid-glass">
+            <div class="doc-header">
+              <span class="doc-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--aurora-lavender);"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                Application Letter
+              </span>
+              <span class="doc-badge">Official Document</span>
+            </div>
+
+            <a href="#modal-letter" class="doc-preview-wrapper" title="Tap to view fullscreen">
+              <img src="application_letter.png" alt="Jay Bernard O. Homecillo Application Letter" class="doc-preview-img" onerror="this.onerror=null; this.src='image_4f0d7a.png';" />
+            </a>
+
+            <div class="doc-card-actions">
+              <a href="#modal-letter" class="doc-btn">Fullscreen View</a>
+              <a href="application_letter.png" target="_blank" download="JayBernard_Homecillo_ApplicationLetter.png" class="doc-btn">Download Image</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pure CSS Fullscreen Modals -->
+    <div id="modal-resume" class="doc-modal">
+      <div class="doc-modal-content">
+        <a href="#documents" class="doc-modal-close" title="Close preview">&times;</a>
+        <img src="resume.png" alt="Jay Bernard O. Homecillo Resume Full View" class="doc-modal-img" onerror="this.onerror=null; this.src='image_4f0d83.png';" />
+      </div>
+    </div>
+
+    <div id="modal-letter" class="doc-modal">
+      <div class="doc-modal-content">
+        <a href="#documents" class="doc-modal-close" title="Close preview">&times;</a>
+        <img src="application_letter.png" alt="Jay Bernard O. Homecillo Application Letter Full View" class="doc-modal-img" onerror="this.onerror=null; this.src='image_4f0d7a.png';" />
+      </div>
+    </div>
+
     <section id="about" class="section">
       <div class="container">
         <div class="section-header">
@@ -1164,7 +1402,7 @@
               </div>
               <div class="stat-box">
                 <div class="stat-number">4+</div>
-                <div class="stat-desc">Core Academic & Practical Web Systems Built</div>
+                <div class="stat-desc">Core Academic &amp; Practical Web Systems Built</div>
               </div>
               <div class="stat-box">
                 <div class="stat-number">Dean's Lister</div>
@@ -1172,7 +1410,7 @@
               </div>
               <div class="stat-box">
                 <div class="stat-number">100%</div>
-                <div class="stat-desc">Commitment to Quality & Continuous Learning</div>
+                <div class="stat-desc">Commitment to Quality &amp; Continuous Learning</div>
               </div>
             </div>
           </div>
@@ -1182,7 +1420,7 @@
         <div class="photo-mosaic">
           <div class="mosaic-item">
             <img src="idnew.png" alt="Jay Bernard Identification Photo" loading="lazy">
-            <div class="mosaic-caption">Student ID & Official Profile</div>
+            <div class="mosaic-caption">Student ID &amp; Official Profile</div>
           </div>
           <div class="mosaic-item">
             <img src="toga.png" alt="Jay Bernard Senior High School Graduation" loading="lazy">
@@ -1204,8 +1442,8 @@
     <section id="experience" class="section">
       <div class="container">
         <div class="section-header">
-          <span class="section-eyebrow">Career & Academic Milestones</span>
-          <h2 class="section-title">Experience & Education</h2>
+          <span class="section-eyebrow">Career &amp; Academic Milestones</span>
+          <h2 class="section-title">Experience &amp; Education</h2>
           <p class="section-desc">My professional trajectory and foundational background in technology.</p>
         </div>
 
@@ -1252,7 +1490,7 @@
 
             <div class="timeline-item">
               <div class="item-date">2023 – 2025</div>
-              <div class="item-title">Science, Technology, Engineering & Mathematics (STEM)</div>
+              <div class="item-title">Science, Technology, Engineering &amp; Mathematics (STEM)</div>
               <div class="item-org">
                 Agusan National High School
                 <span class="honor-tag">With High Honor</span>
@@ -1353,7 +1591,7 @@
                 </div>
                 <span class="project-type">Enterprise Management</span>
               </div>
-              <h3 class="project-title">Gym Membership & Facility Management</h3>
+              <h3 class="project-title">Gym Membership &amp; Facility Management</h3>
               <p class="project-desc">
                 An end-to-end management platform handling member registration, subscription schedules, facility reservation queues, and comprehensive administrative reporting.
               </p>
@@ -1374,16 +1612,16 @@
       <div class="container">
         <div class="section-header">
           <span class="section-eyebrow">Core Competencies</span>
-          <h2 class="section-title">Skills & Technologies</h2>
+          <h2 class="section-title">Skills &amp; Technologies</h2>
           <p class="section-desc">A balance of technical proficiency and collaborative interpersonal capabilities.</p>
         </div>
 
         <div class="skills-grid">
-          <!-- Technical Skill Card -->
+          <!-- Web & Front-End -->
           <div class="skill-card liquid-glass">
             <h3 class="skill-category-title">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-              Web & Front-End
+              Web &amp; Front-End
             </h3>
             <div class="skill-badges">
               <span class="skill-badge"><span class="skill-badge-dot"></span>HTML5</span>
@@ -1394,11 +1632,11 @@
             </div>
           </div>
 
-          <!-- Backend & Database Card -->
+          <!-- Backend & Database -->
           <div class="skill-card liquid-glass">
             <h3 class="skill-category-title">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
-              Backend & Data
+              Backend &amp; Data
             </h3>
             <div class="skill-badges">
               <span class="skill-badge"><span class="skill-badge-dot"></span>PHP</span>
@@ -1409,21 +1647,21 @@
             </div>
           </div>
 
-          <!-- Tools & Workflow Card -->
+          <!-- Tools & Workflow -->
           <div class="skill-card liquid-glass">
             <h3 class="skill-category-title">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
-              Tools & Workflow
+              Tools &amp; Workflow
             </h3>
             <div class="skill-badges">
-              <span class="skill-badge"><span class="skill-badge-dot"></span>Git & GitHub</span>
+              <span class="skill-badge"><span class="skill-badge-dot"></span>Git &amp; GitHub</span>
               <span class="skill-badge"><span class="skill-badge-dot"></span>Web Deployment</span>
               <span class="skill-badge"><span class="skill-badge-dot"></span>Debugging</span>
               <span class="skill-badge"><span class="skill-badge-dot"></span>IT Support</span>
             </div>
           </div>
 
-          <!-- Professional & Soft Skills Card -->
+          <!-- Professional Soft Skills -->
           <div class="skill-card liquid-glass">
             <h3 class="skill-category-title">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
@@ -1447,11 +1685,11 @@
       <div class="container">
         <div class="section-header">
           <span class="section-eyebrow">Professional Verification</span>
-          <h2 class="section-title">Certifications & References</h2>
+          <h2 class="section-title">Certifications &amp; References</h2>
           <p class="section-desc">Formal training completed and verified institutional character references.</p>
         </div>
 
-        <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1.25rem; color: #fff;">Certifications & Trainings</h3>
+        <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1.25rem; color: #fff;">Certifications &amp; Trainings</h3>
         <div class="certs-grid">
           <div class="cert-item liquid-glass">
             <span class="cert-year">2026</span>
@@ -1467,7 +1705,7 @@
 
           <div class="cert-item liquid-glass">
             <span class="cert-year">2026</span>
-            <h4 class="cert-name">Effective Communication & Workplace Skills Training</h4>
+            <h4 class="cert-name">Effective Communication &amp; Workplace Skills Training</h4>
             <span class="cert-issuer">Caraga State University</span>
           </div>
 
@@ -1549,6 +1787,16 @@
               <span class="contact-value">Agusan Pequeño, Butuan City, 8600</span>
             </div>
           </a>
+
+          <a href="https://github.com/jayhomecillo1-byte" target="_blank" rel="noopener noreferrer" class="contact-item liquid-glass">
+            <div class="contact-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            </div>
+            <div class="contact-details">
+              <span class="contact-type">GitHub Profile</span>
+              <span class="contact-value">github.com/jayhomecillo1-byte</span>
+            </div>
+          </a>
         </div>
       </div>
     </section>
@@ -1560,7 +1808,7 @@
         &copy; 2026 <span class="footer-name">Jay Bernard O. Homecillo</span>. All rights reserved.
       </p>
       <p class="footer-text" style="font-size: 0.775rem; margin-top: 0.35rem; opacity: 0.7;">
-        Crafted with pure HTML5 & modern CSS3 • Liquid Glass & SoftAurora aesthetics
+        Crafted with pure HTML5 &amp; modern CSS3 • Liquid Glass &amp; SoftAurora aesthetics
       </p>
     </div>
   </footer>
